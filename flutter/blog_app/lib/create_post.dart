@@ -52,13 +52,13 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
 
     if (response.statusCode == 201) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('✅ Post created!')),
+        const SnackBar(content: Text('Post created!')),
       );
       Navigator.pop(context);
     } else {
       print('Error: ${response.body}');
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('❌ Failed: ${response.body}')),
+        SnackBar(content: Text('Failed: ${response.body}')),
       );
     }
   }

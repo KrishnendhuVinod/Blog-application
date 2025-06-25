@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
       final token = data['token'];
       final userId = data['user_id'];
 
-      print('✅ Login successful!');
+      print(' Login successful!');
       print('Token: $token');
       print('User ID: $userId');
       if (!mounted) return;
@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       );
     } else {
-      print('❌ Login failed: ${response.body}');
+      print(' Login failed: ${response.body}');
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -95,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Welcome 👋',
+                  'Welcome',
                   style: TextStyle(
                     fontSize: 28,
                     fontWeight: FontWeight.bold,

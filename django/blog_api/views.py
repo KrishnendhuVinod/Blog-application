@@ -28,7 +28,7 @@ class PostListView(APIView):
         serializer = PostSerializer(posts, many=True)
         return Response(serializer.data)
 
-# Post Detail + Update API
+# Post Detail and Update API
 class PostDetailView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 

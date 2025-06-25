@@ -25,12 +25,12 @@ class PostDetailScreen extends StatelessWidget {
 
     if (response.statusCode == 204 || response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('✅ Post deleted successfully!')),
+        const SnackBar(content: Text(' Post deleted successfully!')),
       );
       Navigator.pop(context, true); // Go back to list
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('❌ Failed to delete: ${response.body}')),
+        SnackBar(content: Text(' Failed to delete: ${response.body}')),
       );
     }
   }

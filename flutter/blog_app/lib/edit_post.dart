@@ -57,12 +57,12 @@ class _EditPostScreenState extends State<EditPostScreen> {
 
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('✅ Post updated successfully!')),
+          const SnackBar(content: Text(' Post updated successfully!')),
         );
         Navigator.pop(context, true); // Return to previous screen
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('❌ Update failed: ${response.body}')),
+          SnackBar(content: Text(' Update failed: ${response.body}')),
         );
       }
     } catch (e) {
@@ -70,7 +70,7 @@ class _EditPostScreenState extends State<EditPostScreen> {
         isUpdating = false;
       });
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('❌ Error: $e')),
+        SnackBar(content: Text(' Error: $e')),
       );
     }
   }
